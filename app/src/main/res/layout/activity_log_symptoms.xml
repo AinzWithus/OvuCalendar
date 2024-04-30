@@ -29,6 +29,8 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
+
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -65,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="3"
                 android:layout_marginStart="22dp"
-                android:text="@string/Moods"
+                android:text="Your Period Flow"
                 android:textAlignment="viewStart"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_semibold"
@@ -73,143 +75,124 @@
                 android:textSize="16sp" />
 
             <LinearLayout
-                android:id="@+id/moods"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:id="@+id/heavy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_row="1"
                 android:layout_column="0"
                 android:layout_margin="7dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/formoods"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:id="@+id/forheavy"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/gradient_mixture"
-                    android:elevation="5dp">
+                    android:elevation="5dp"
+                    >
 
                     <ImageView
+                        android:id="@+id/itheavy"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/mood"
-                        app:tint="@color/white" />
+                        android:src="@drawable/high" />
+
                 </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/caption_text_view1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mood_swings"
-                    android:textSize="5sp"
                     android:layout_gravity="center"
-                    android:layout_margin="8dp"
+                    android:text="Heavy"
                     android:textColor="@color/black"
-                    android:gravity="bottom"/>
+                    android:textSize="15sp" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/stress"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:id="@+id/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_row="1"
                 android:layout_column="1"
                 android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/forstress"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:id="@+id/formedium"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/gradient_mixture"
                     android:elevation="5dp">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/depressed"
-                        app:tint="@color/white" />
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:srcCompat="@drawable/medium" />
+
                 </RelativeLayout>
+
                 <TextView
-                    android:id="@+id/caption_text_view2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/stressed"
-                    android:textSize="100sp"
-                    android:layout_margin="8dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Medium"
                     android:textColor="@color/black"
-                    android:gravity="bottom"/>
+                    android:textSize="16sp" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/forstress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_mixture"
+                    android:elevation="5dp"
+                    tools:ignore="DuplicateIds">
+
+
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/anger"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:id="@+id/low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_row="1"
                 android:layout_column="2"
                 android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/foranger"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:id="@+id/forlow"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/gradient_mixture"
                     android:elevation="5dp">
 
-
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/anger"
-                        app:tint="@color/white" />
+                        android:id="@+id/itlow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/low" />
+
                 </RelativeLayout>
+
+
                 <TextView
                     android:id="@+id/caption_text_view3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/angry"
-                    android:textSize="100sp"
-                    android:layout_margin="8dp"
+                    android:layout_gravity="center"
+                    android:text="low"
                     android:textColor="@color/black"
-                    android:gravity="bottom"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/guilt"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_row="2"
-                android:layout_column="0"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:id="@+id/forguilt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/gradient_mixture"
-                    android:elevation="5dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/filguilty"
-                        app:tint="@color/white" />
-                </RelativeLayout>
-                <TextView
-                    android:id="@+id/caption_text_view4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/feeling_guilty"
-                    android:textSize="100sp"
-                    android:layout_margin="8dp"
-                    android:textColor="@color/black"
-                    android:gravity="bottom"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -239,7 +222,7 @@
                     android:id="@+id/caption_text_view5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/apathetic"
+                    android:text="apathetic"
                     android:textSize="100sp"
                     android:layout_margin="8dp"
                     android:textColor="@color/black"
@@ -531,7 +514,22 @@
                     android:text="@string/feeling_tired"
                     android:textColor="@color/black"
                     android:textSize="100sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Low"
+                    android:textColor="@color/black"
+                    android:textSize="19dp" />
             </LinearLayout>
+
+
+
+
         </GridLayout>
 
     </androidx.core.widget.NestedScrollView>
@@ -556,5 +554,6 @@
     </RelativeLayout>
 
 
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,25 +21,28 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginBottom="15dp"
                 android:background="@drawable/custom_edit_text_background"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                >
 
                 <LinearLayout
-                    android:layout_width="220dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
+                        android:layout_marginTop="17dp"
+                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Your estimated due date is"
-                        android:textSize="14sp"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="35dp" />
+                        />
 
                     <TextView
                         android:id="@+id/estDueDate"
@@ -50,12 +53,28 @@
                         android:layout_marginStart="20dp" />
                 </LinearLayout>
 
-                <ImageView
-                    android:layout_width="110dp"
+                <LinearLayout
+                    android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="40dp"
-                    android:src="@drawable/baseline_calendar_today_24" />
+                    android:background="@drawable/estimated_period_day">
+
+                    <TextView
+                        android:id="@+id/datetext"
+                        android:text="13th"
+                        android:textSize="16dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+
+                </LinearLayout>
+
 
             </RelativeLayout>
         </LinearLayout>

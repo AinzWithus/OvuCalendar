@@ -18,7 +18,8 @@ public class LogSymptoms extends AppCompatActivity {
     public Boolean IsStressed = false;
     public Boolean IsAngry = false;
     public Boolean FeelsApathetic = false;
-    public Boolean FeelsGuilty = false;
+   //
+   // public Boolean FeelsGuilty = false;
     public Boolean IsNervous = false;
     public Boolean IsBloating = false;
     public Boolean HasHeadache = false;
@@ -35,11 +36,11 @@ public class LogSymptoms extends AppCompatActivity {
         confirmChangesBtn = findViewById(R.id.confirmbtn);
 
         // Find all the LinearLayouts containing the icons
-        LinearLayout linearLayoutItem1 = findViewById(R.id.moods);
-        LinearLayout linearLayoutItem2 = findViewById(R.id.stress);
-        LinearLayout linearLayoutItem3 = findViewById(R.id.anger);
+        LinearLayout linearLayoutItem1 = findViewById(R.id.heavy);
+        LinearLayout linearLayoutItem2 = findViewById(R.id.medium);
+        LinearLayout linearLayoutItem3 = findViewById(R.id.low);
         LinearLayout linearLayoutItem4 = findViewById(R.id.apathetic);
-        LinearLayout linearLayoutItem5 = findViewById(R.id.guilt);
+        //LinearLayout linearLayoutItem5 = findViewById(R.id.guilt);
         LinearLayout linearLayoutItem6 = findViewById(R.id.nervous);
         LinearLayout linearLayoutItem7 = findViewById(R.id.bloating);
         LinearLayout linearLayoutItem8 = findViewById(R.id.headache);
@@ -52,7 +53,8 @@ public class LogSymptoms extends AppCompatActivity {
         // Set click listeners for each LinearLayout
         linearLayoutItem1.setOnClickListener(new View.OnClickListener() {
             // declare the relativelayout id for each background
-            final int id = R.id.formoods;
+            final int id = R.id.forheavy;
+
             @Override
             public void onClick(View v) {
                 toggleBackground(v,id);
@@ -63,7 +65,7 @@ public class LogSymptoms extends AppCompatActivity {
         });
 
         linearLayoutItem2.setOnClickListener(new View.OnClickListener() {
-            final int id = R.id.forstress;
+            final int id = R.id.formedium;
             @Override
             public void onClick(View v) {
                 toggleBackground(v,id);
@@ -72,7 +74,7 @@ public class LogSymptoms extends AppCompatActivity {
         });
 
         linearLayoutItem3.setOnClickListener(new View.OnClickListener() {
-            final int id = R.id.foranger;
+            final int id = R.id.forlow;
             @Override
             public void onClick(View v) {
                 toggleBackground(v,id);
@@ -89,14 +91,14 @@ public class LogSymptoms extends AppCompatActivity {
             }
         });
 
-        linearLayoutItem5.setOnClickListener(new View.OnClickListener() {
+      /*  linearLayoutItem5.setOnClickListener(new View.OnClickListener() {
             final int id = R.id.forguilt;
             @Override
             public void onClick(View v) {
                 toggleBackground(v,id);
                 FeelsGuilty = true;
             }
-        });
+        });*/
 
         linearLayoutItem6.setOnClickListener(new View.OnClickListener() {
             final int id = R.id.fornervours;

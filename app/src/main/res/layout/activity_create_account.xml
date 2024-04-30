@@ -129,6 +129,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Enter name here"
+                    android:maxHeight="100dp"
                     android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,6 +154,7 @@
                     style="@style/MyTextInputEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxHeight="100dp"
                     android:hint="Enter email here" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,6 +179,7 @@
                     style="@style/MyTextInputEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxHeight="100dp"
                     android:hint="Enter password here" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -201,6 +204,7 @@
                     style="@style/MyTextInputEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxHeight="100dp"
                     android:hint="Enter phone number here" />
             </com.google.android.material.textfield.TextInputLayout>
 

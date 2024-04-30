@@ -3,7 +3,9 @@ package com.femwell;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -11,15 +13,20 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.BounceInterpolator;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import com.femwell.R;
+import com.femwell.databinding.ActivityCreateAccountBinding;
+import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Calendar;
 import java.util.Objects;
 
 public class UserIntention extends AppCompatActivity {
@@ -28,9 +35,9 @@ public class UserIntention extends AppCompatActivity {
     private Dialog popupDialogforPregnacyOpt;
 
     int periodOkBtnId = R.id.periodOkbtn;
-    int periodSkipBtnId = R.id.periodSkippedbtn;
+   // int periodSkipBtnId = R.id.periodSkippedbtn;
     int pregnancyOkBtnId = R.id.pregancyOkbtn;
-    int pregnancySkipBtnId = R.id.pregancySkippedbtn;
+    //int pregnancySkipBtnId = R.id.pregancySkippedbtn;
 
 
 
@@ -120,4 +127,38 @@ public class UserIntention extends AppCompatActivity {
         showPopup(popupDialogforPregnacyOpt,pregnancyOkBtnId);
     }
 
+    public void showDatePickerDialog1(View view) {
+        TextInputEditText myTextInput = (TextInputEditText) view;
+
+
+        DatePickerFragment newFragment = new DatePickerFragment(myTextInput, this);
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+        TextInputEditText editor;
+        Context context;
+        public DatePickerFragment(TextInputEditText myeditor, Context mycontext){
+            this.editor = myeditor;
+            this.context = mycontext;
+
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            return new DatePickerDialog(getActivity(), this, year, month, day);
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            // save the date in db on the patients DOB
+            // For example, update the EditText with the selected date
+            editor.setText(day + "/" + (month + 1) + "/" + year);
+        }
+    }
 }
